@@ -1,10 +1,11 @@
 import 'dart:io';
 
 main(){
-  imculoImc();
+  calculoImc();
 }
 
-imculoImc(){
+// recebe os dados e calcular o imc
+calculoImc(){
   // pegar peso da pessoa
   print('Insira seu peso:');
   String textPeso = stdin.readLineSync();
@@ -21,10 +22,12 @@ imculoImc(){
   imprimirResultado(imc);
 }
 
+// calculo do imc
 double calcImc(int peso, double altura){
   return peso / (altura * altura);
 }
 
+// retorna resultado do imc na tela do usuário
 imprimirResultado(double imc){
   if(imc < 18.5){
     print('Abaixo do peso');
