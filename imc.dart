@@ -1,6 +1,10 @@
 import 'dart:io';
 
 main(){
+  calculoImc();
+}
+
+calculoImc(){
   // pegar peso da pessoa
   print('Insira seu peso:');
   var textPeso = stdin.readLineSync();
@@ -14,7 +18,10 @@ main(){
   // retornar imc
   print('O resultado do IMC é:');
   print(calc);
+  imprimirResultado(calc);
+}
 
+imprimirResultado(calc){
   if(calc < 18.5){
     print('Abaixo do peso');
   } else if(calc > 18.5 && calc < 24.9){
@@ -28,5 +35,4 @@ main(){
   } else {
     print('Obessidade Grau 3');
   }
-
 }
